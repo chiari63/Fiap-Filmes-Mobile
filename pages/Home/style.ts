@@ -1,11 +1,10 @@
 import styled from 'styled-components/native'
 import {MaterialIcons} from '@expo/vector-icons'
-import {RectButton} from 'react-native-gesture-handler'
-
+import {RectButton} from 'react-native-gesture-handler' 
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${({theme}) => theme.color.background}
+    background-color: ${({theme}) => theme.color.background};
 `;
 
 export const PosterHeader = styled.Image`
@@ -15,8 +14,8 @@ export const PosterHeader = styled.Image`
 `;
 
 export const TituloDestaque = styled.Text`
-    color: ${({theme}) => theme.color.text}
-    font-family: ${({theme}) => theme.fonte.bebas}
+    color: ${({theme}) => theme.color.text};
+    font-family: ${({theme}) => theme.fonte.bebas};
     font-size: 54px;
     text-transform: uppercase;
     top: -50px;
@@ -30,9 +29,9 @@ export const Header = styled.View`
     align-items: center;
 `;
 export const TituoSecao = styled.Text`
-    font-family: ${({theme}) => theme.fonte.regular}
+    font-family: ${({theme}) => theme.fonte.regular};
     font-size: 20px;
-    color: ${({theme}) => theme.color.text}
+    color: ${({theme}) => theme.color.text};
     padding-left: 8px;
     border-left-width: 5px;
     border-color: ${({theme}) => theme.color.primary};

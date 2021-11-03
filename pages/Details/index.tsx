@@ -15,9 +15,9 @@ import {Calendar,
         Resumo,
         TituloDestaque } from "./style";
 
-export function Detail({navigation}){
+export function Detail({navigation}: any){
     const route = useRoute()
-    const{ filme }= route.params
+    const{ filme }: any = route.params
 
     function handleBack(){
         navigation.goBack()
