@@ -1,41 +1,22 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { Filme } from "../../model/filme";
-import {
-    Container,
-    Header,  
-    PosterHeader, 
-    TituloDestaque,
-    TituoSecao,
-    SecaoFilems,
-    CardFilme,
-    Poster,
-    Avaliacao,
-    Nota,
-    Icon,
-    ListaHorizontal,
-} from "./style"
+import {Container, Header, PosterHeader, TituloDestaque, TituoSecao, SecaoFilems, CardFilme, Poster, Avaliacao, Nota, Icon, ListaHorizontal,} from "./style"
 
 export default function Home({ navigation }: any) { 
     const [filmes, setFilmes] = useState([])
     const [series, setSeries] = useState([])
-   
-    
 
-    useEffect(() => {
-        async function carregarDadosMovie(){
+    useEffect(async () => {
             const respostaMovie: any = await axios.get('https://api.themoviedb.org/3/trending/movie/week?api_key=d96157e71a9a85257b60a42cafcdd67e')
             setFilmes(respostaMovie.data.results)
-        }            
-        carregarDadosMovie()
-    })
-    useEffect(() => {
-        async function carregarDadosSerie(){
+                   
+    }, [])
+    useEffect(async () => {
             const respostaSerie: any = await axios.get('https://api.themoviedb.org/3/trending/tv/week?api_key=d96157e71a9a85257b60a42cafcdd67e')
             setSeries(respostaSerie.data.results)
-        }
-        carregarDadosSerie()
-    })
+        
+    },[])
 
     function handleDetail(filme: Filme){
         navigation.navigate('Details', {filme})
