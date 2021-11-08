@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 import {MaterialIcons} from '@expo/vector-icons'
 import {RectButton} from 'react-native-gesture-handler'
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
     flex: 1;
     background-color: ${({theme}) => theme.color.background}
 `;
@@ -13,29 +13,30 @@ export const Body = styled.View`
 
 export const PosterHeader = styled.Image`
     width: 400px;
-    height: 790px;
+    height: 200px;
     opacity: 0.3;
 `;
 export const BotaoDestaque = styled.TouchableOpacity`
+    flex-direction: column;
     background-color: ${({theme}) => theme.color.primary}
     border-radius: 10px;
-    width: 400px;
-    padding: 8px;
-
+    width: 390px;
+    padding: 8px; 
+    
 `;
 export const NomeBotao = styled.Text`
     text-align: center;
     color: white;
     font-family: ${({theme}) => theme.fonte.regular}
     font-size: 18px;
- 
+   
 `;
 
 export const TituloDestaque = styled.Text`
     color: ${({theme}) => theme.color.text}
     font-family: ${({theme}) => theme.fonte.bebas}
     font-size: 50px;
-    top: -750px;
+    top: -130px;
     text-align: center;
     border-bottom-width: 5px;
     border-color: ${({theme}) => theme.color.primary};
@@ -46,7 +47,7 @@ export const Resumo = styled.Text`
     color: ${({theme}) => theme.color.text}
     font-family: ${({theme}) => theme.fonte.regular}
     font-size: 18px;
-    top: -700px;
+    top: -60px;
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 5);
     margin: 5px;
@@ -57,7 +58,7 @@ export const InfAdcional = styled.View`
     padding: 5px;
     justify-content: space-evenly;
     flex-direction: row;
-    top: -670px;
+    top: -50px;
 `;
 export const Avaliacao = styled.View`
     background-color: rgba(0,0,0,.5);

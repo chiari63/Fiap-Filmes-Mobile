@@ -27,9 +27,9 @@ export function Detail({navigation}: any){
         <Container>
             <Body>
                 <PosterHeader source={{ uri: 'https://image.tmdb.org/t/p/w200/' + filme.poster_path}} />
-                <BotaoDestaque onPress={handleBack}><NomeBotao>Voltar</NomeBotao></BotaoDestaque>
                 <TituloDestaque>{filme.title || filme.name}</TituloDestaque>
                 <Resumo>{filme.overview}</Resumo>
+                <Resumo>{filme.id}</Resumo>
                     <InfAdcional>
                         <Avaliacao>
                             <Icon name="star" />
@@ -40,6 +40,7 @@ export function Detail({navigation}: any){
                             <Data>{filme.release_date || filme.first_air_date}</Data>
                         </Lancamento>
                     </InfAdcional>
+                <BotaoDestaque onPress={handleBack}><NomeBotao>Voltar</NomeBotao></BotaoDestaque>
             </Body>
         </Container>
     )}
